@@ -252,6 +252,8 @@ reshapeMetaInfo <- function(metaInfo) {
 genome2UCSC <- function(x) {
   if (x == "GRCh38") {
     "hg38"
+  } else if (x == "GRCm38") {
+    "mm10"
   } else {
     x
   }
