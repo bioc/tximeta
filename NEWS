@@ -1,3 +1,7 @@
+Changes in version 1.4.3
+
+* Update hash table to include Ensembl 99, GENCODE 33, M24
+
 Changes in version 1.4.0
 + tximeta will now pull down RefSeq seqinfo, using the
   dirname() of the GTF location, and assuming some
