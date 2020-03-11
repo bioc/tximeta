@@ -217,7 +217,7 @@ information for each transcript. Here, we swap out the transcript
 *GRanges*, where each element of the list gives the exons for a
 particular transcript).
 
-```{r}
+```{r eval=FALSE}
 se.exons <- addExons(se)
 rowRanges(se.exons)[[1]]
 ```
