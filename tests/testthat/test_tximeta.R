@@ -13,7 +13,7 @@ test_that("tximeta works as expected", {
   makeLinkedTxome(indexDir=indexDir, source="Ensembl", organism="Drosophila melanogaster",
                   release="98", genome="BDGP6.22", fasta=fastaFTP, gtf=gtfPath, write=FALSE)
 
-  expect_warning({se <- tximeta(coldata)}, "annotation is missing")
+  # expect_warning({se <- tximeta(coldata)}, "annotation is missing")
 
   # check adding exons
   library(SummarizedExperiment)
@@ -28,7 +28,7 @@ test_that("tximeta works as expected", {
   gse <- addIds(gse, "REFSEQ", gene=TRUE)
     
   # just a vector of file paths is ok
-  expect_warning({se <- tximeta(files)})
+  # expect_warning({se <- tximeta(files)})
 
   # check error on txOut=FALSE
   expect_error({se <- tximeta(coldata, txOut=FALSE)}, "transcript-level output")
