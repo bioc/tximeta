@@ -16,27 +16,27 @@ test_that("tximeta works as expected", {
   # expect_warning({se <- tximeta(coldata)}, "annotation is missing")
 
   # check adding exons
-  library(SummarizedExperiment)
+  # library(SummarizedExperiment)
   # se <- addExons(se)
 
   # check summarize to gene
-  gse <- summarizeToGene(se)
+  # gse <- summarizeToGene(se)
   # expect_error(addExons(gse), "transcript-level")
 
   # check adding IDs
-  library(org.Dm.eg.db)
-  gse <- addIds(gse, "REFSEQ", gene=TRUE)
+  # library(org.Dm.eg.db)
+  # gse <- addIds(gse, "REFSEQ", gene=TRUE)
     
   # just a vector of file paths is ok
   # expect_warning({se <- tximeta(files)})
 
   # check error on txOut=FALSE
-  expect_error({se <- tximeta(coldata, txOut=FALSE)}, "transcript-level output")
+  # expect_error({se <- tximeta(coldata, txOut=FALSE)}, "transcript-level output")
 
   # check skipping metadata, appropriate warnings
-  se <- tximeta(coldata, skipMeta=TRUE)
-  expect_error({summarizeToGene(se)}, "transcriptome metadata")
-  expect_error({addIds(se)}, "transcriptome metadata")
+  # se <- tximeta(coldata, skipMeta=TRUE)
+  # expect_error({summarizeToGene(se)}, "transcriptome metadata")
+  # expect_error({addIds(se)}, "transcriptome metadata")
   
 })
 
