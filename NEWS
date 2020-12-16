@@ -1,3 +1,7 @@
+Changes in version 1.8.3
++ Fixed bug where duplicate entries went in BFC, for
+  Ensembl GTF files.
+
 Changes in version 1.8.2
 + Added hashes for GENCODE 36 and Ensembl 102.
 
