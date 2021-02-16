@@ -1,3 +1,6 @@
+Changes in version 1.8.4
++ Update to Ensembl 103 / GENCODE Hs 37 and M26
+
 Changes in version 1.8.3
 + Fixed bug where duplicate entries went in BFC, for
   Ensembl GTF files.
