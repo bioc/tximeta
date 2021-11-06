@@ -1,3 +1,6 @@
+Changes in version 1.12.2
++ Commenting out vignette chunk bc upstream issue.
+
 Changes in version 1.12.1
 + Automatically propagate colData and rowData to the
   generated DGEList (fix from Charlotte).
