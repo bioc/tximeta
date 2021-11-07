@@ -1,5 +1,8 @@
-Changes in version 1.12.2
+Changes in version 1.12.3
 + Commenting out vignette chunk bc upstream issue.
+  Also tests relying on Ahub. Adding more support
+  for linkedTxomes with local database of GENCODE
+  or Ensembl.
 
 Changes in version 1.12.1
 + Automatically propagate colData and rowData to the
