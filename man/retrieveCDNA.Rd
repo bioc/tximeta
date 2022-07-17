@@ -23,8 +23,8 @@ the rows of the SummarizedExperiment (which could be
 already summarized to genes for example).
 }
 \examples{
-
+\dontrun{
 example(tximeta)
 cdna <- retrieveCDNA(se)
-
+}
 }

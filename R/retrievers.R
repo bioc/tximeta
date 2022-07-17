@@ -37,10 +37,10 @@ retrieveDb <- function(se) {
 #' @return a DNAStringSet object
 #'
 #' @examples
-#'
+#' \dontrun{
 #' example(tximeta)
 #' cdna <- retrieveCDNA(se)
-#' 
+#' }
 #' @export
 retrieveCDNA <- function(se, quiet=FALSE) {
   if (!is(se, "SummarizedExperiment")) {

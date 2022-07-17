@@ -46,7 +46,9 @@ test_that("tximeta works as expected", {
   edb <- retrieveDb(se)
 
   # check retrieving the cDNA sequence
-  cdna <- retrieveCDNA(se)
+  if (FALSE) {
+    cdna <- retrieveCDNA(se)
+  }
   
   # just a vector of file paths is ok...
   # TODO why not throwing warnings on Bioc
