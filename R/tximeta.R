@@ -493,7 +493,7 @@ missingMetadata <- function(se, summarize=FALSE) {
   If (2), use a linkedTxome to provide the missing metadata and rerun tximeta"
   if (summarize) {
     msg <- paste0(msg, "
-  or use tx2gene, txOut=FALSE (and skipMeta=TRUE if Salmon/piscem)")
+  or provide a `tx2gene` data.frame and set `skipRanges=TRUE`")
   }
   if (is.null(metadata(se)$txomeInfo)) stop(msg)
 }

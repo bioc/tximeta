@@ -9,6 +9,7 @@
   object,
   assignRanges = c("range", "abundant"),
   varReduce = FALSE,
+  skipRanges = FALSE,
   ...
 )
 }
@@ -30,6 +31,9 @@ isoform proportions) are also returned in \code{mcols}}
 
 \item{varReduce}{whether to reduce per-sample inferential replicates
 information into a matrix of sample variances \code{variance} (default FALSE)}
+
+\item{skipRanges}{whether to skip making use of, or outputting, rowRanges
+(default FALSE)}
 
 \item{...}{arguments passed to \code{tximport}}
 }

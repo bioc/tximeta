@@ -1,3 +1,10 @@
+# tximeta 1.25.1
+
+* Added `skipRanges` to `summarizeToGene` which allows
+  summarization of assay data when `skipMeta` was used
+  and therefore ranges should not be used / output in
+  summarization.
+
 # tximeta 1.23.5
 
 * GENCODE 47 (H.s.), M36 (M.m), and Ensembl 113
