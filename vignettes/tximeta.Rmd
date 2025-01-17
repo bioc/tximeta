@@ -314,6 +314,11 @@ transcript and exons, the gene ranges are cached locally for repeated
 usage. The transcript IDs are stored as a *CharacterList* column
 `tx_ids`.
 
+**Note:** you can also use `summarizeToGene` on an object created with
+`skipMeta=TRUE` which therefore does not have ranges or an associated *TxDb* by
+setting `skipRanges=TRUE` and providing your own `tx2gene` table which is passed
+to `tximport`.
+
 ```{r}
 gse <- summarizeToGene(se)
 rowRanges(gse)
