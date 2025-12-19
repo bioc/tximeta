@@ -315,7 +315,7 @@ updateMetadata <- function(
   )
 
   # pull out the txomeInfo for each index
-  txomeInfo <- sapply(digests, getTxomeInfo, prefer=c("txome","txpdata","precomputed"), quiet = TRUE)
+  txomeInfo <- lapply(digests, getTxomeInfo, prefer=c("txome","txpdata","precomputed"), quiet = TRUE)
 
   # empty GRanges, add to this per index / txpData in loop below
   ranges_to_add <- GenomicRanges::GRanges()
