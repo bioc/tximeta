@@ -1,3 +1,9 @@
+# tximeta 1.28.2
+
+* In updateMetadata(), fixing bug in how columns were initiated,
+  for list-type columns from S4Vectors package, and setting all
+  initial values to NA.
+
 # tximeta 1.28.0
 
 * Addition of `makeLinkedTxpData()` a lightweight version

@@ -442,7 +442,10 @@ mergeTxpDataIntoRowData <- function(rowdata, txpDataToAdd, matches, indexName) {
   idx_rowdata <- match(matches, rownames(rowdata)) # index of the matches in the SE
   for (col in colnames(txpDataToAdd)) {
     if (!col %in% colnames(rowdata)) {
-      rowdata[col] <- NA
+      # initialize with NA
+      vector <- txpDataToAdd[, col]
+      vector <- endoapply(vector, \(x) NA)
+      rowdata[col] <- rep(vector, length.out = nrow(rowdata))
     }
     rowdata[idx_rowdata, col] <- txpDataToAdd[, col]
   }
