@@ -1,3 +1,8 @@
+# tximeta 1.30.1
+
+* GENCODE 50 (H.s.), M39 (M.m), and Ensembl 116 (June 2026).
+  (except for Drosophila which has a GTF issue)
+
 # tximeta 1.30.0
 
 * Updates to vignette to mention edgeR's new
