@@ -1,3 +1,27 @@
+# tximeta 1.32.0
+
+* `importData()` now supports `type="salmon"` for mixed reference
+  transcript workflows, where *salmon* quantifies against an index that
+  combines annotated (e.g. GENCODE, Ensembl) and novel (e.g. *de novo*
+  assembled) transcripts. Because *salmon* does not record per-sub-index
+  digests itself, a companion Snakemake rule
+  ([thelovelab/salmon-with-mixed-ref](https://github.com/thelovelab/salmon-with-mixed-ref))
+  computes them at index time, and the new `mixedDigest` argument points
+  `importData()` to the resulting JSON file. This brings *salmon* users
+  the same provenance tracking previously available only for *oarfish*:
+  the annotated portion of a combined index is still recognized, so
+  `inspectDigests()` and `updateMetadata()` can attach transcript and
+  gene metadata automatically. See the "How it works" section of the
+  README and the "Mixed reference transcripts" section (subsection
+  "salmon mixed reference") of the vignette.
+* New argument `gencode_gtf_prefix` in `tximeta()` to specify a
+  non-default GENCODE GTF, e.g. `"primary_assembly"` or `"basic"`.
+* Support for GENCODE 50 (H.s.), M39 (M.m.), and Ensembl 116.
+* Bug fixes in `updateMetadata()` (`prefer` argument now respected,
+  missing character columns filled with `NA`) and in `checkViaAHub()`.
+* Tests and vignette updated for the reduced tximportData (>= 1.41.1).
+* Added contributing guidelines (CONTRIBUTING.md) and updated diagrams.
+
 # tximeta 1.31.9
 
 * Fix bug where `updateMetadata()` ignored its `prefer` argument,
